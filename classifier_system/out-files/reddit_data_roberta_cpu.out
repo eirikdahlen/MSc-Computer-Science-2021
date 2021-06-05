@@ -1,0 +1,460 @@
+We are running from this directory: /cluster/home/eirida/masteroppgave/Masteroppgave
+The name of the job is: reddit_data_roberta_cpu
+Th job ID is 254490
+The job was run on these nodes: idun-03-20
+Number of nodes: 1
+We are using 8 cores
+We are using 8 cores per node
+Total of 8 cores
+2021-05-26 09:40:07.046152: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /cluster/apps/eb/software/Python/3.8.2-GCCcore-9.3.0/lib:/cluster/apps/eb/software/libffi/3.3-GCCcore-9.3.0/lib64:/cluster/apps/eb/software/libffi/3.3-GCCcore-9.3.0/lib:/cluster/apps/eb/software/GMP/6.2.0-GCCcore-9.3.0/lib:/cluster/apps/eb/software/XZ/5.2.5-GCCcore-9.3.0/lib:/cluster/apps/eb/software/SQLite/3.31.1-GCCcore-9.3.0/lib:/cluster/apps/eb/software/Tcl/8.6.10-GCCcore-9.3.0/lib:/cluster/apps/eb/software/libreadline/8.0-GCCcore-9.3.0/lib:/cluster/apps/eb/software/ncurses/6.2-GCCcore-9.3.0/lib:/cluster/apps/eb/software/bzip2/1.0.8-GCCcore-9.3.0/lib:/cluster/apps/eb/software/binutils/2.34-GCCcore-9.3.0/lib:/cluster/apps/eb/software/zlib/1.2.11-GCCcore-9.3.0/lib:/cluster/apps/eb/software/GCCcore/9.3.0/lib64:/cluster/apps/eb/software/GCCcore/9.3.0/lib
+2021-05-26 09:40:07.046224: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+Starting run...
+2021-05-26 09:40:09.953316: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /cluster/apps/eb/software/Python/3.8.2-GCCcore-9.3.0/lib:/cluster/apps/eb/software/libffi/3.3-GCCcore-9.3.0/lib64:/cluster/apps/eb/software/libffi/3.3-GCCcore-9.3.0/lib:/cluster/apps/eb/software/GMP/6.2.0-GCCcore-9.3.0/lib:/cluster/apps/eb/software/XZ/5.2.5-GCCcore-9.3.0/lib:/cluster/apps/eb/software/SQLite/3.31.1-GCCcore-9.3.0/lib:/cluster/apps/eb/software/Tcl/8.6.10-GCCcore-9.3.0/lib:/cluster/apps/eb/software/libreadline/8.0-GCCcore-9.3.0/lib:/cluster/apps/eb/software/ncurses/6.2-GCCcore-9.3.0/lib:/cluster/apps/eb/software/bzip2/1.0.8-GCCcore-9.3.0/lib:/cluster/apps/eb/software/binutils/2.34-GCCcore-9.3.0/lib:/cluster/apps/eb/software/zlib/1.2.11-GCCcore-9.3.0/lib:/cluster/apps/eb/software/GCCcore/9.3.0/lib64:/cluster/apps/eb/software/GCCcore/9.3.0/lib
+2021-05-26 09:40:09.953348: W tensorflow/stream_executor/cuda/cuda_driver.cc:326] failed call to cuInit: UNKNOWN ERROR (303)
+2021-05-26 09:40:09.953370: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (idun-03-20): /proc/driver/nvidia/version does not exist
+Number of GPUs Avail: 0
+2021-05-26 09:40:09.953522: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2021-05-26 09:40:09.975361: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 2800000000 Hz
+2021-05-26 09:40:09.975934: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x555bf9f902d0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2021-05-26 09:40:09.975971: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+GPU Name: 
+Cuda: True
+14750 14750 14750
+376 376 376
+Load tokenizers
+Tokenize...
+Load models
+All model checkpoint layers were used when initializing TFRobertaForSequenceClassification.
+
+Some layers of TFRobertaForSequenceClassification were not initialized from the model checkpoint at roberta-base and are newly initialized: ['classifier']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Load weights
+Performing predictions...
+2021-05-26 09:40:23.797806: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+WARNING:tensorflow:The parameters `output_attentions`, `output_hidden_states` and `use_cache` cannot be updated when calling a model.They have to be set to True/False in the config object (i.e.: `config=XConfig.from_pretrained('name', output_attentions=True)`).
+WARNING:tensorflow:The parameter `return_dict` cannot be set in graph mode and will always be set to `True`.
+Performing predictions...
+WARNING:tensorflow:The parameters `output_attentions`, `output_hidden_states` and `use_cache` cannot be updated when calling a model.They have to be set to True/False in the config object (i.e.: `config=XConfig.from_pretrained('name', output_attentions=True)`).
+WARNING:tensorflow:The parameter `return_dict` cannot be set in graph mode and will always be set to `True`.
+Score from RoBERTa:
+              precision    recall  f1-score   support
+
+           0      0.987     0.815     0.893       189
+           1      0.506     0.899     0.647        99
+           2      0.773     0.386     0.515        88
+
+    accuracy                          0.737       376
+   macro avg      0.755     0.700     0.685       376
+weighted avg      0.810     0.737     0.740       376
+
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.iter
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.decay
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.learning_rate
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.embeddings.weight
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.embeddings.embeddings
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.embeddings.token_type_embeddings
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).classifier.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).classifier.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).classifier.out_proj.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).classifier.out_proj.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.embeddings.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.embeddings.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.0.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.0.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.0.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.0.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.0.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.0.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.1.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.1.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.1.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.1.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.1.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.1.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.2.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.2.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.2.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.2.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.2.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.2.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.3.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.3.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.3.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.3.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.3.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.3.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.4.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.4.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.4.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.4.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.4.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.4.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.5.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.5.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.5.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.5.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.5.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.5.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.6.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.6.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.6.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.6.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.6.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.6.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.7.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.7.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.7.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.7.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.7.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.7.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.8.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.8.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.8.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.8.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.8.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.8.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.9.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.9.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.9.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.9.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.9.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.9.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.10.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.10.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.10.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.10.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.10.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.10.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.11.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.11.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.11.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.11.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.11.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.11.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.0.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.0.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.0.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.0.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.0.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.0.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.0.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.0.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.0.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.0.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.1.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.1.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.1.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.1.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.1.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.1.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.1.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.1.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.1.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.1.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.2.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.2.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.2.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.2.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.2.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.2.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.2.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.2.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.2.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.2.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.3.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.3.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.3.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.3.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.3.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.3.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.3.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.3.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.3.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.3.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.4.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.4.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.4.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.4.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.4.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.4.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.4.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.4.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.4.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.4.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.5.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.5.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.5.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.5.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.5.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.5.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.5.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.5.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.5.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.5.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.6.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.6.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.6.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.6.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.6.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.6.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.6.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.6.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.6.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.6.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.7.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.7.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.7.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.7.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.7.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.7.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.7.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.7.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.7.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.7.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.8.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.8.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.8.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.8.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.8.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.8.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.8.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.8.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.8.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.8.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.9.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.9.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.9.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.9.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.9.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.9.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.9.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.9.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.9.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.9.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.10.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.10.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.10.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.10.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.10.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.10.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.10.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.10.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.10.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.10.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.11.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.11.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.11.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.11.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.11.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.11.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.11.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.11.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.11.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).roberta.encoder.layer.11.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.embeddings.weight
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.embeddings.embeddings
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.embeddings.token_type_embeddings
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).classifier.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).classifier.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).classifier.out_proj.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).classifier.out_proj.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.embeddings.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.embeddings.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.0.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.0.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.0.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.0.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.0.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.0.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.1.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.1.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.1.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.1.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.1.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.1.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.2.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.2.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.2.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.2.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.2.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.2.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.3.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.3.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.3.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.3.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.3.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.3.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.4.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.4.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.4.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.4.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.4.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.4.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.5.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.5.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.5.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.5.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.5.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.5.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.6.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.6.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.6.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.6.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.6.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.6.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.7.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.7.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.7.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.7.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.7.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.7.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.8.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.8.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.8.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.8.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.8.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.8.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.9.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.9.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.9.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.9.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.9.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.9.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.10.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.10.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.10.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.10.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.10.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.10.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.11.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.11.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.11.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.11.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.11.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.11.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.0.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.0.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.0.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.0.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.0.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.0.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.0.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.0.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.0.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.0.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.1.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.1.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.1.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.1.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.1.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.1.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.1.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.1.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.1.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.1.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.2.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.2.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.2.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.2.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.2.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.2.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.2.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.2.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.2.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.2.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.3.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.3.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.3.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.3.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.3.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.3.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.3.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.3.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.3.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.3.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.4.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.4.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.4.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.4.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.4.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.4.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.4.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.4.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.4.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.4.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.5.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.5.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.5.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.5.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.5.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.5.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.5.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.5.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.5.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.5.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.6.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.6.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.6.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.6.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.6.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.6.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.6.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.6.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.6.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.6.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.7.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.7.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.7.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.7.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.7.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.7.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.7.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.7.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.7.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.7.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.8.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.8.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.8.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.8.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.8.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.8.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.8.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.8.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.8.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.8.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.9.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.9.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.9.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.9.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.9.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.9.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.9.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.9.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.9.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.9.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.10.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.10.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.10.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.10.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.10.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.10.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.10.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.10.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.10.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.10.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.11.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.11.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.11.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.11.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.11.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.11.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.11.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.11.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.11.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).roberta.encoder.layer.11.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:A checkpoint was restored (e.g. tf.train.Checkpoint.restore or tf.keras.Model.load_weights) but not all checkpointed values were used. See above for specific issues. Use expect_partial() on the load status object, e.g. tf.train.Checkpoint.restore(...).expect_partial(), to silence these warnings, or use assert_consumed() to make the check explicit. See https://www.tensorflow.org/guide/checkpoint#loading_mechanics for details.
+Linux idun-03-20 4.18.0-193.el8.x86_64 #1 SMP Fri May 8 10:59:10 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux

@@ -1,0 +1,1417 @@
+We are running from this directory: /cluster/home/eirida/masteroppgave/Masteroppgave
+The name of the job is: reddit_data_ernieL
+Th job ID is 249291
+The job was run on these nodes: idun-06-03
+Number of nodes: 1
+We are using 8 cores
+We are using 8 cores per node
+Total of 8 cores
+2021-05-26 11:41:22.174307: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+Starting run...
+2021-05-26 11:42:07.959499: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcuda.so.1
+2021-05-26 11:42:08.709523: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:89:00.0 name: Tesla V100-PCIE-32GB computeCapability: 7.0
+coreClock: 1.38GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 836.37GiB/s
+2021-05-26 11:42:08.726569: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-05-26 11:42:08.735051: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-05-26 11:42:08.743149: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-05-26 11:42:09.092410: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-05-26 11:42:09.320966: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-05-26 11:42:09.619046: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-05-26 11:42:09.621995: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2021-05-26 11:42:09.639046: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2021-05-26 11:42:11.855976: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+Number of GPUs Avail: 1
+2021-05-26 11:42:11.899442: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2021-05-26 11:42:12.573156: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 2400000000 Hz
+2021-05-26 11:42:12.604294: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55c04dad2bd0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2021-05-26 11:42:12.604333: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2021-05-26 11:42:14.304416: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55c04de03290 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2021-05-26 11:42:14.304469: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-PCIE-32GB, Compute Capability 7.0
+2021-05-26 11:42:14.445289: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:89:00.0 name: Tesla V100-PCIE-32GB computeCapability: 7.0
+coreClock: 1.38GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 836.37GiB/s
+2021-05-26 11:42:14.445349: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-05-26 11:42:14.445389: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-05-26 11:42:14.445406: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-05-26 11:42:14.445421: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-05-26 11:42:14.445455: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-05-26 11:42:14.445471: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-05-26 11:42:14.445486: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2021-05-26 11:42:14.445502: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2021-05-26 11:42:14.590644: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2021-05-26 11:42:14.590717: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-05-26 11:42:19.003150: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-05-26 11:42:19.003199: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2021-05-26 11:42:19.003212: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2021-05-26 11:42:19.082233: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/device:GPU:0 with 30105 MB memory) -> physical GPU (device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:89:00.0, compute capability: 7.0)
+GPU Name: /device:GPU:0
+Cuda: True
+14750 14750 14750
+376 376 376
+Load tokenizers
+Tokenize...
+Asking to truncate to max_length but no maximum length is provided and the model has no predefined maximum length. Default to no truncation.
+Load models
+2021-05-26 11:42:25.584087: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:89:00.0 name: Tesla V100-PCIE-32GB computeCapability: 7.0
+coreClock: 1.38GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 836.37GiB/s
+2021-05-26 11:42:25.584156: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-05-26 11:42:25.584197: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-05-26 11:42:25.584213: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-05-26 11:42:25.584227: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-05-26 11:42:25.584242: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-05-26 11:42:25.584257: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-05-26 11:42:25.584271: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2021-05-26 11:42:25.584286: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2021-05-26 11:42:25.589965: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2021-05-26 11:42:25.590012: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-05-26 11:42:25.590026: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2021-05-26 11:42:25.590036: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2021-05-26 11:42:25.647951: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30105 MB memory) -> physical GPU (device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:89:00.0, compute capability: 7.0)
+2021-05-26 11:42:27.599106: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-05-26 11:42:30.995228: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+All model checkpoint layers were used when initializing TFBertForSequenceClassification.
+
+Some layers of TFBertForSequenceClassification were not initialized from the model checkpoint at nghuyong/ernie-2.0-large-en and are newly initialized: ['classifier']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Load weights
+Performing predictions...
+2021-05-26 11:42:50.948331: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+WARNING:tensorflow:The parameters `output_attentions`, `output_hidden_states` and `use_cache` cannot be updated when calling a model.They have to be set to True/False in the config object (i.e.: `config=XConfig.from_pretrained('name', output_attentions=True)`).
+WARNING:tensorflow:The parameter `return_dict` cannot be set in graph mode and will always be set to `True`.
+Performing predictions...
+WARNING:tensorflow:The parameters `output_attentions`, `output_hidden_states` and `use_cache` cannot be updated when calling a model.They have to be set to True/False in the config object (i.e.: `config=XConfig.from_pretrained('name', output_attentions=True)`).
+WARNING:tensorflow:The parameter `return_dict` cannot be set in graph mode and will always be set to `True`.
+2021-05-26 11:47:16.993754: W tensorflow/core/common_runtime/bfc_allocator.cc:433] Allocator (GPU_0_bfc) ran out of memory trying to allocate 44.42GiB (rounded to 47698485248)requested by op tf_bert_for_sequence_classification/bert/encoder/layer_._0/attention/self/MatMul
+Current allocation summary follows.
+2021-05-26 11:47:16.993869: I tensorflow/core/common_runtime/bfc_allocator.cc:972] BFCAllocator dump for GPU_0_bfc
+2021-05-26 11:47:16.993899: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (256): 	Total Chunks: 28, Chunks in use: 28. 7.0KiB allocated for chunks. 7.0KiB in use in bin. 136B client-requested in use in bin.
+2021-05-26 11:47:16.993912: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (512): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2021-05-26 11:47:16.993924: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (1024): 	Total Chunks: 1, Chunks in use: 1. 1.2KiB allocated for chunks. 1.2KiB in use in bin. 1.0KiB client-requested in use in bin.
+2021-05-26 11:47:16.993935: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (2048): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2021-05-26 11:47:16.993947: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (4096): 	Total Chunks: 219, Chunks in use: 219. 881.5KiB allocated for chunks. 881.5KiB in use in bin. 876.0KiB client-requested in use in bin.
+2021-05-26 11:47:16.993958: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (8192): 	Total Chunks: 2, Chunks in use: 1. 20.2KiB allocated for chunks. 12.0KiB in use in bin. 12.0KiB client-requested in use in bin.
+2021-05-26 11:47:16.993978: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (16384): 	Total Chunks: 27, Chunks in use: 25. 500.0KiB allocated for chunks. 464.0KiB in use in bin. 400.0KiB client-requested in use in bin.
+2021-05-26 11:47:16.993989: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (32768): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2021-05-26 11:47:16.993999: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (65536): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2021-05-26 11:47:16.994009: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (131072): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2021-05-26 11:47:16.994020: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (262144): 	Total Chunks: 1, Chunks in use: 0. 296.0KiB allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2021-05-26 11:47:16.994053: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (524288): 	Total Chunks: 1, Chunks in use: 1. 603.2KiB allocated for chunks. 603.2KiB in use in bin. 603.2KiB client-requested in use in bin.
+2021-05-26 11:47:16.994065: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (1048576): 	Total Chunks: 1, Chunks in use: 0. 1.18MiB allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2021-05-26 11:47:16.994076: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (2097152): 	Total Chunks: 2, Chunks in use: 1. 4.23MiB allocated for chunks. 2.00MiB in use in bin. 2.00MiB client-requested in use in bin.
+2021-05-26 11:47:16.994087: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (4194304): 	Total Chunks: 98, Chunks in use: 97. 399.56MiB allocated for chunks. 393.56MiB in use in bin. 388.00MiB client-requested in use in bin.
+2021-05-26 11:47:16.994097: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (8388608): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2021-05-26 11:47:16.994108: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (16777216): 	Total Chunks: 50, Chunks in use: 48. 855.23MiB allocated for chunks. 819.23MiB in use in bin. 768.00MiB client-requested in use in bin.
+2021-05-26 11:47:16.994118: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (33554432): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2021-05-26 11:47:16.994130: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (67108864): 	Total Chunks: 1, Chunks in use: 1. 119.23MiB allocated for chunks. 119.23MiB in use in bin. 119.23MiB client-requested in use in bin.
+2021-05-26 11:47:16.994140: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (134217728): 	Total Chunks: 2, Chunks in use: 0. 309.68MiB allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2021-05-26 11:47:16.994151: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (268435456): 	Total Chunks: 6, Chunks in use: 4. 27.75GiB allocated for chunks. 2.36GiB in use in bin. 2.36GiB client-requested in use in bin.
+2021-05-26 11:47:16.994162: I tensorflow/core/common_runtime/bfc_allocator.cc:995] Bin for 44.42GiB was 256.00MiB, Chunk State: 
+2021-05-26 11:47:16.994179: I tensorflow/core/common_runtime/bfc_allocator.cc:1001]   Size: 603.25MiB | Requested Size: 603.25MiB | in_use: 0 | bin_num: 20, prev:   Size: 603.25MiB | Requested Size: 603.25MiB | in_use: 1 | bin_num: -1, next:   Size: 603.25MiB | Requested Size: 603.25MiB | in_use: 1 | bin_num: -1
+2021-05-26 11:47:16.994192: I tensorflow/core/common_runtime/bfc_allocator.cc:1001]   Size: 24.80GiB | Requested Size: 384B | in_use: 0 | bin_num: 20, prev:   Size: 603.25MiB | Requested Size: 603.25MiB | in_use: 1 | bin_num: -1
+2021-05-26 11:47:16.994201: I tensorflow/core/common_runtime/bfc_allocator.cc:1008] Next region of size 31568271872
+2021-05-26 11:47:16.994214: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6000000 of size 1280 next 1
+2021-05-26 11:47:16.994224: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6000500 of size 256 next 2
+2021-05-26 11:47:16.994234: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6000600 of size 256 next 8
+2021-05-26 11:47:16.994243: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6000700 of size 256 next 14
+2021-05-26 11:47:16.994252: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6000800 of size 256 next 16
+2021-05-26 11:47:16.994262: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6000900 of size 256 next 20
+2021-05-26 11:47:16.994271: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6000a00 of size 4096 next 21
+2021-05-26 11:47:16.994280: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6001a00 of size 256 next 22
+2021-05-26 11:47:16.994296: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6001b00 of size 4096 next 23
+2021-05-26 11:47:16.994307: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6002b00 of size 256 next 38
+2021-05-26 11:47:16.994316: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6002c00 of size 256 next 25
+2021-05-26 11:47:16.994325: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6002d00 of size 256 next 26
+2021-05-26 11:47:16.994334: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6002e00 of size 256 next 17
+2021-05-26 11:47:16.994344: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6002f00 of size 4352 next 15
+2021-05-26 11:47:16.994353: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6004000 of size 4096 next 30
+2021-05-26 11:47:16.994363: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6005000 of size 4096 next 33
+2021-05-26 11:47:16.994372: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6006000 of size 4096 next 37
+2021-05-26 11:47:16.994381: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6007000 of size 4096 next 156
+2021-05-26 11:47:16.994390: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6008000 of size 4096 next 150
+2021-05-26 11:47:16.994400: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6009000 of size 12288 next 178
+2021-05-26 11:47:16.994409: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e600c000 of size 4096 next 179
+2021-05-26 11:47:16.994419: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e600d000 of size 4096 next 176
+2021-05-26 11:47:16.994428: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e600e000 of size 4096 next 174
+2021-05-26 11:47:16.994438: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e600f000 of size 5632 next 39
+2021-05-26 11:47:16.994447: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6010600 of size 256 next 44
+2021-05-26 11:47:16.994456: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6010700 of size 4096 next 29
+2021-05-26 11:47:16.994466: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6011700 of size 4096 next 48
+2021-05-26 11:47:16.994475: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6012700 of size 4096 next 49
+2021-05-26 11:47:16.994484: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6013700 of size 4096 next 45
+2021-05-26 11:47:16.994493: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6014700 of size 4096 next 41
+2021-05-26 11:47:16.994503: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6015700 of size 4096 next 51
+2021-05-26 11:47:16.994512: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6016700 of size 4096 next 57
+2021-05-26 11:47:16.994521: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6017700 of size 4096 next 55
+2021-05-26 11:47:16.994531: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6018700 of size 4096 next 50
+2021-05-26 11:47:16.994540: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6019700 of size 7936 next 35
+2021-05-26 11:47:16.994550: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e601b600 of size 4096 next 24
+2021-05-26 11:47:16.994559: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e601c600 of size 24576 next 66
+2021-05-26 11:47:16.994569: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6022600 of size 4096 next 82
+2021-05-26 11:47:16.994578: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6023600 of size 24576 next 83
+2021-05-26 11:47:16.994587: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6029600 of size 4096 next 93
+2021-05-26 11:47:16.994602: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e602a600 of size 4096 next 89
+2021-05-26 11:47:16.994612: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e602b600 of size 4096 next 97
+2021-05-26 11:47:16.994622: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e602c600 of size 24576 next 99
+2021-05-26 11:47:16.994631: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6032600 of size 4096 next 119
+2021-05-26 11:47:16.994640: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6033600 of size 4096 next 92
+2021-05-26 11:47:16.994649: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6034600 of size 4096 next 130
+2021-05-26 11:47:16.994659: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6035600 of size 4096 next 127
+2021-05-26 11:47:16.994668: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6036600 of size 4096 next 131
+2021-05-26 11:47:16.994677: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6037600 of size 4096 next 135
+2021-05-26 11:47:16.994686: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6038600 of size 4096 next 137
+2021-05-26 11:47:16.994696: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6039600 of size 20480 next 136
+2021-05-26 11:47:16.994705: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e603e600 of size 4096 next 143
+2021-05-26 11:47:16.994714: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e603f600 of size 4096 next 122
+2021-05-26 11:47:16.994723: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6040600 of size 4096 next 120
+2021-05-26 11:47:16.994733: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6041600 of size 4096 next 118
+2021-05-26 11:47:16.994742: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6042600 of size 4096 next 168
+2021-05-26 11:47:16.994751: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6043600 of size 4096 next 169
+2021-05-26 11:47:16.994760: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6044600 of size 4096 next 185
+2021-05-26 11:47:16.994770: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] Free  at 1536e6045600 of size 16384 next 181
+2021-05-26 11:47:16.994779: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6049600 of size 16384 next 232
+2021-05-26 11:47:16.994788: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e604d600 of size 4096 next 234
+2021-05-26 11:47:16.994798: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e604e600 of size 4096 next 231
+2021-05-26 11:47:16.994807: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e604f600 of size 4096 next 241
+2021-05-26 11:47:16.994816: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6050600 of size 4096 next 158
+2021-05-26 11:47:16.994825: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6051600 of size 4096 next 160
+2021-05-26 11:47:16.994834: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6052600 of size 4096 next 165
+2021-05-26 11:47:16.994844: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6053600 of size 4096 next 177
+2021-05-26 11:47:16.994853: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6054600 of size 4096 next 183
+2021-05-26 11:47:16.994862: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6055600 of size 4096 next 193
+2021-05-26 11:47:16.994871: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6056600 of size 4096 next 194
+2021-05-26 11:47:16.994881: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6057600 of size 4096 next 190
+2021-05-26 11:47:16.994890: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6058600 of size 4096 next 195
+2021-05-26 11:47:16.994904: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6059600 of size 4096 next 199
+2021-05-26 11:47:16.994914: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e605a600 of size 4096 next 201
+2021-05-26 11:47:16.994923: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e605b600 of size 4096 next 198
+2021-05-26 11:47:16.994933: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e605c600 of size 20480 next 200
+2021-05-26 11:47:16.994942: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6061600 of size 20480 next 27
+2021-05-26 11:47:16.994951: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6066600 of size 4096 next 11
+2021-05-26 11:47:16.994961: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6067600 of size 4096 next 9
+2021-05-26 11:47:16.994974: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6068600 of size 4096 next 413
+2021-05-26 11:47:16.994983: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6069600 of size 256 next 389
+2021-05-26 11:47:16.994993: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6069700 of size 256 next 417
+2021-05-26 11:47:16.995002: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6069800 of size 256 next 422
+2021-05-26 11:47:16.995011: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6069900 of size 256 next 230
+2021-05-26 11:47:16.995020: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6069a00 of size 256 next 59
+2021-05-26 11:47:16.995030: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6069b00 of size 256 next 427
+2021-05-26 11:47:16.995039: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6069c00 of size 256 next 288
+2021-05-26 11:47:16.995048: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6069d00 of size 256 next 433
+2021-05-26 11:47:16.995057: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6069e00 of size 256 next 890
+2021-05-26 11:47:16.995066: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6069f00 of size 256 next 880
+2021-05-26 11:47:16.995076: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e606a000 of size 256 next 879
+2021-05-26 11:47:16.995085: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e606a100 of size 256 next 430
+2021-05-26 11:47:16.995094: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e606a200 of size 256 next 434
+2021-05-26 11:47:16.995103: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e606a300 of size 256 next 435
+2021-05-26 11:47:16.995112: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e606a400 of size 256 next 426
+2021-05-26 11:47:16.995122: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] Free  at 1536e606a500 of size 8448 next 419
+2021-05-26 11:47:16.995131: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e606c600 of size 16384 next 420
+2021-05-26 11:47:16.995140: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6070600 of size 20480 next 28
+2021-05-26 11:47:16.995149: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6075600 of size 4096 next 52
+2021-05-26 11:47:16.995159: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6076600 of size 4096 next 62
+2021-05-26 11:47:16.995168: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6077600 of size 4096 next 68
+2021-05-26 11:47:16.995177: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6078600 of size 4096 next 78
+2021-05-26 11:47:16.995186: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6079600 of size 4096 next 81
+2021-05-26 11:47:16.995195: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e607a600 of size 4096 next 88
+2021-05-26 11:47:16.995211: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e607b600 of size 4096 next 208
+2021-05-26 11:47:16.995221: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e607c600 of size 4096 next 209
+2021-05-26 11:47:16.995230: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e607d600 of size 4096 next 237
+2021-05-26 11:47:16.995240: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e607e600 of size 4096 next 240
+2021-05-26 11:47:16.995249: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e607f600 of size 4096 next 244
+2021-05-26 11:47:16.995258: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6080600 of size 4096 next 249
+2021-05-26 11:47:16.995267: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6081600 of size 4096 next 247
+2021-05-26 11:47:16.995277: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6082600 of size 4096 next 250
+2021-05-26 11:47:16.995286: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6083600 of size 4096 next 242
+2021-05-26 11:47:16.995295: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6084600 of size 4096 next 246
+2021-05-26 11:47:16.995304: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6085600 of size 4096 next 223
+2021-05-26 11:47:16.995314: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6086600 of size 4096 next 261
+2021-05-26 11:47:16.995323: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6087600 of size 4096 next 264
+2021-05-26 11:47:16.995332: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6088600 of size 4096 next 297
+2021-05-26 11:47:16.995341: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6089600 of size 4096 next 294
+2021-05-26 11:47:16.995350: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e608a600 of size 4096 next 302
+2021-05-26 11:47:16.995360: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e608b600 of size 4096 next 308
+2021-05-26 11:47:16.995369: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e608c600 of size 4096 next 310
+2021-05-26 11:47:16.995378: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e608d600 of size 4096 next 313
+2021-05-26 11:47:16.995387: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e608e600 of size 4096 next 312
+2021-05-26 11:47:16.995397: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e608f600 of size 4096 next 311
+2021-05-26 11:47:16.995406: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6090600 of size 4096 next 314
+2021-05-26 11:47:16.995415: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6091600 of size 4096 next 317
+2021-05-26 11:47:16.995424: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6092600 of size 4096 next 321
+2021-05-26 11:47:16.995433: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6093600 of size 4096 next 322
+2021-05-26 11:47:16.995443: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6094600 of size 4096 next 319
+2021-05-26 11:47:16.995452: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6095600 of size 16384 next 304
+2021-05-26 11:47:16.995461: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6099600 of size 4096 next 305
+2021-05-26 11:47:16.995470: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e609a600 of size 4096 next 306
+2021-05-26 11:47:16.995480: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e609b600 of size 4096 next 393
+2021-05-26 11:47:16.995489: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e609c600 of size 4096 next 391
+2021-05-26 11:47:16.995498: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e609d600 of size 4096 next 399
+2021-05-26 11:47:16.995512: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e609e600 of size 4096 next 397
+2021-05-26 11:47:16.995522: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e609f600 of size 4096 next 405
+2021-05-26 11:47:16.995531: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60a0600 of size 4096 next 408
+2021-05-26 11:47:16.995540: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60a1600 of size 4096 next 412
+2021-05-26 11:47:16.995549: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60a2600 of size 4096 next 414
+2021-05-26 11:47:16.995558: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] Free  at 1536e60a3600 of size 20480 next 418
+2021-05-26 11:47:16.995568: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60a8600 of size 4096 next 65
+2021-05-26 11:47:16.995577: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60a9600 of size 4096 next 72
+2021-05-26 11:47:16.995586: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60aa600 of size 4096 next 390
+2021-05-26 11:47:16.995595: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60ab600 of size 4096 next 416
+2021-05-26 11:47:16.995605: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60ac600 of size 20480 next 70
+2021-05-26 11:47:16.995614: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60b1600 of size 4096 next 74
+2021-05-26 11:47:16.995623: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60b2600 of size 4096 next 71
+2021-05-26 11:47:16.995632: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60b3600 of size 4096 next 63
+2021-05-26 11:47:16.995641: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60b4600 of size 4096 next 80
+2021-05-26 11:47:16.995651: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60b5600 of size 4096 next 96
+2021-05-26 11:47:16.995660: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60b6600 of size 4096 next 103
+2021-05-26 11:47:16.995669: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60b7600 of size 4096 next 105
+2021-05-26 11:47:16.995678: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60b8600 of size 4096 next 104
+2021-05-26 11:47:16.995688: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60b9600 of size 4096 next 102
+2021-05-26 11:47:16.995697: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60ba600 of size 4096 next 106
+2021-05-26 11:47:16.995706: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60bb600 of size 4096 next 109
+2021-05-26 11:47:16.995715: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60bc600 of size 4096 next 91
+2021-05-26 11:47:16.995725: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60bd600 of size 4096 next 100
+2021-05-26 11:47:16.995734: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60be600 of size 4096 next 112
+2021-05-26 11:47:16.995743: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60bf600 of size 16384 next 85
+2021-05-26 11:47:16.995752: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60c3600 of size 4096 next 90
+2021-05-26 11:47:16.995762: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60c4600 of size 4096 next 87
+2021-05-26 11:47:16.995771: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60c5600 of size 4096 next 77
+2021-05-26 11:47:16.995780: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60c6600 of size 4096 next 7
+2021-05-26 11:47:16.995789: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60c7600 of size 4096 next 110
+2021-05-26 11:47:16.995799: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60c8600 of size 4096 next 142
+2021-05-26 11:47:16.995813: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60c9600 of size 4096 next 145
+2021-05-26 11:47:16.995822: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60ca600 of size 4096 next 149
+2021-05-26 11:47:16.995832: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60cb600 of size 4096 next 151
+2021-05-26 11:47:16.995841: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60cc600 of size 4096 next 153
+2021-05-26 11:47:16.995850: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60cd600 of size 4096 next 152
+2021-05-26 11:47:16.995859: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60ce600 of size 20480 next 166
+2021-05-26 11:47:16.995869: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60d3600 of size 4096 next 167
+2021-05-26 11:47:16.995878: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60d4600 of size 4096 next 116
+2021-05-26 11:47:16.995887: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60d5600 of size 4096 next 121
+2021-05-26 11:47:16.995896: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60d6600 of size 4096 next 157
+2021-05-26 11:47:16.995906: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60d7600 of size 4096 next 161
+2021-05-26 11:47:16.995915: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60d8600 of size 4096 next 162
+2021-05-26 11:47:16.995924: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60d9600 of size 4096 next 159
+2021-05-26 11:47:16.995933: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60da600 of size 4096 next 184
+2021-05-26 11:47:16.995942: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60db600 of size 4096 next 196
+2021-05-26 11:47:16.995952: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60dc600 of size 4096 next 206
+2021-05-26 11:47:16.995961: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60dd600 of size 4096 next 210
+2021-05-26 11:47:16.995973: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60de600 of size 4096 next 217
+2021-05-26 11:47:16.995982: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60df600 of size 4096 next 214
+2021-05-26 11:47:16.995991: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60e0600 of size 4096 next 216
+2021-05-26 11:47:16.996001: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60e1600 of size 4096 next 218
+2021-05-26 11:47:16.996010: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60e2600 of size 4096 next 211
+2021-05-26 11:47:16.996019: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60e3600 of size 4096 next 225
+2021-05-26 11:47:16.996028: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60e4600 of size 4096 next 226
+2021-05-26 11:47:16.996038: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60e5600 of size 4096 next 222
+2021-05-26 11:47:16.996047: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60e6600 of size 4096 next 229
+2021-05-26 11:47:16.996056: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60e7600 of size 4096 next 228
+2021-05-26 11:47:16.996065: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60e8600 of size 4096 next 233
+2021-05-26 11:47:16.996074: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60e9600 of size 4096 next 189
+2021-05-26 11:47:16.996084: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60ea600 of size 4096 next 191
+2021-05-26 11:47:16.996093: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60eb600 of size 16384 next 258
+2021-05-26 11:47:16.996102: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60ef600 of size 16384 next 60
+2021-05-26 11:47:16.996117: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60f3600 of size 16384 next 262
+2021-05-26 11:47:16.996127: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60f7600 of size 16384 next 277
+2021-05-26 11:47:16.996136: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e60fb600 of size 16384 next 117
+2021-05-26 11:47:16.996145: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] Free  at 1536e60ff600 of size 303104 next 282
+2021-05-26 11:47:16.996155: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6149600 of size 4096 next 280
+2021-05-26 11:47:16.996164: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e614a600 of size 4096 next 287
+2021-05-26 11:47:16.996173: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e614b600 of size 4096 next 279
+2021-05-26 11:47:16.996182: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e614c600 of size 4096 next 290
+2021-05-26 11:47:16.996192: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e614d600 of size 4096 next 286
+2021-05-26 11:47:16.996201: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e614e600 of size 4096 next 289
+2021-05-26 11:47:16.996210: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e614f600 of size 4096 next 293
+2021-05-26 11:47:16.996219: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6150600 of size 24576 next 328
+2021-05-26 11:47:16.996229: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6156600 of size 4096 next 329
+2021-05-26 11:47:16.996238: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6157600 of size 4096 next 326
+2021-05-26 11:47:16.996247: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6158600 of size 4096 next 327
+2021-05-26 11:47:16.996256: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6159600 of size 4096 next 335
+2021-05-26 11:47:16.996266: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e615a600 of size 4096 next 338
+2021-05-26 11:47:16.996275: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e615b600 of size 4096 next 339
+2021-05-26 11:47:16.996284: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e615c600 of size 4096 next 337
+2021-05-26 11:47:16.996293: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e615d600 of size 4096 next 334
+2021-05-26 11:47:16.996302: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e615e600 of size 4096 next 341
+2021-05-26 11:47:16.996312: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e615f600 of size 4096 next 345
+2021-05-26 11:47:16.996321: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6160600 of size 16384 next 320
+2021-05-26 11:47:16.996330: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6164600 of size 4096 next 325
+2021-05-26 11:47:16.996339: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6165600 of size 4096 next 351
+2021-05-26 11:47:16.996349: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6166600 of size 4096 next 349
+2021-05-26 11:47:16.996358: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6167600 of size 4096 next 359
+2021-05-26 11:47:16.996367: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6168600 of size 4096 next 361
+2021-05-26 11:47:16.996376: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6169600 of size 4096 next 362
+2021-05-26 11:47:16.996385: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e616a600 of size 4096 next 360
+2021-05-26 11:47:16.996395: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e616b600 of size 4096 next 358
+2021-05-26 11:47:16.996404: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e616c600 of size 4096 next 367
+2021-05-26 11:47:16.996417: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e616d600 of size 4096 next 369
+2021-05-26 11:47:16.996427: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e616e600 of size 4096 next 370
+2021-05-26 11:47:16.996437: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e616f600 of size 4096 next 368
+2021-05-26 11:47:16.996446: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6170600 of size 4096 next 371
+2021-05-26 11:47:16.996455: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6171600 of size 16384 next 292
+2021-05-26 11:47:16.996464: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6175600 of size 4096 next 296
+2021-05-26 11:47:16.996473: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6176600 of size 4096 next 348
+2021-05-26 11:47:16.996483: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6177600 of size 4096 next 350
+2021-05-26 11:47:16.996492: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6178600 of size 4096 next 353
+2021-05-26 11:47:16.996501: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6179600 of size 16384 next 354
+2021-05-26 11:47:16.996511: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e617d600 of size 4096 next 409
+2021-05-26 11:47:16.996520: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e617e600 of size 4096 next 406
+2021-05-26 11:47:16.996529: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e617f600 of size 4096 next 265
+2021-05-26 11:47:16.996538: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6180600 of size 4096 next 205
+2021-05-26 11:47:16.996547: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6181600 of size 4096 next 257
+2021-05-26 11:47:16.996557: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6182600 of size 24576 next 253
+2021-05-26 11:47:16.996566: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6188600 of size 4096 next 255
+2021-05-26 11:47:16.996575: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6189600 of size 4096 next 256
+2021-05-26 11:47:16.996584: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e618a600 of size 4096 next 273
+2021-05-26 11:47:16.996594: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e618b600 of size 4096 next 274
+2021-05-26 11:47:16.996603: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e618c600 of size 4096 next 270
+2021-05-26 11:47:16.996612: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e618d600 of size 4096 next 272
+2021-05-26 11:47:16.996621: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e618e600 of size 4096 next 276
+2021-05-26 11:47:16.996631: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e618f600 of size 4096 next 281
+2021-05-26 11:47:16.996640: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6190600 of size 4096 next 263
+2021-05-26 11:47:16.996649: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6191600 of size 4096 next 295
+2021-05-26 11:47:16.996658: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6192600 of size 4096 next 342
+2021-05-26 11:47:16.996668: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6193600 of size 4096 next 344
+2021-05-26 11:47:16.996677: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6194600 of size 4096 next 98
+2021-05-26 11:47:16.996686: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6195600 of size 4096 next 376
+2021-05-26 11:47:16.996695: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6196600 of size 4096 next 377
+2021-05-26 11:47:16.996704: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6197600 of size 4096 next 374
+2021-05-26 11:47:16.996718: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6198600 of size 4096 next 375
+2021-05-26 11:47:16.996728: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6199600 of size 4096 next 383
+2021-05-26 11:47:16.996737: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e619a600 of size 4096 next 386
+2021-05-26 11:47:16.996746: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e619b600 of size 4096 next 387
+2021-05-26 11:47:16.996755: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e619c600 of size 4096 next 384
+2021-05-26 11:47:16.996765: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e619d600 of size 4096 next 381
+2021-05-26 11:47:16.996774: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e619e600 of size 4096 next 388
+2021-05-26 11:47:16.996783: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e619f600 of size 16384 next 392
+2021-05-26 11:47:16.996792: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e61a3600 of size 4096 next 396
+2021-05-26 11:47:16.996802: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e61a4600 of size 4096 next 398
+2021-05-26 11:47:16.996811: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e61a5600 of size 4096 next 401
+2021-05-26 11:47:16.996820: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e61a6600 of size 16384 next 402
+2021-05-26 11:47:16.996830: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e61aa600 of size 6692864 next 423
+2021-05-26 11:47:16.996839: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e680c600 of size 6291456 next 18
+2021-05-26 11:47:16.996849: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e6e0c600 of size 4194304 next 19
+2021-05-26 11:47:16.996858: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e720c600 of size 4194304 next 31
+2021-05-26 11:47:16.996868: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e760c600 of size 4194304 next 34
+2021-05-26 11:47:16.996877: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e7a0c600 of size 4194304 next 36
+2021-05-26 11:47:16.996886: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e7e0c600 of size 4194304 next 67
+2021-05-26 11:47:16.996895: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e820c600 of size 4194304 next 73
+2021-05-26 11:47:16.996905: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e860c600 of size 25165824 next 40
+2021-05-26 11:47:16.996914: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536e9e0c600 of size 16777216 next 32
+2021-05-26 11:47:16.996924: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536eae0c600 of size 16777216 next 54
+2021-05-26 11:47:16.996933: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536ebe0c600 of size 16777216 next 58
+2021-05-26 11:47:16.996942: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536ece0c600 of size 4194304 next 53
+2021-05-26 11:47:16.996952: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536ed20c600 of size 5431296 next 3
+2021-05-26 11:47:16.996961: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536ed73a600 of size 256 next 4
+2021-05-26 11:47:16.996974: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536ed73a700 of size 4194304 next 332
+2021-05-26 11:47:16.996983: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536edb3a700 of size 4194304 next 324
+2021-05-26 11:47:16.996992: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536edf3a700 of size 4194304 next 343
+2021-05-26 11:47:16.997002: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536ee33a700 of size 4194304 next 64
+2021-05-26 11:47:16.997011: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536ee73a700 of size 16777216 next 43
+2021-05-26 11:47:16.997025: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536ef73a700 of size 4194304 next 69
+2021-05-26 11:47:16.997034: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536efb3a700 of size 4194304 next 79
+2021-05-26 11:47:16.997044: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536eff3a700 of size 4194304 next 86
+2021-05-26 11:47:16.997053: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536f033a700 of size 4194304 next 75
+2021-05-26 11:47:16.997062: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536f073a700 of size 16777216 next 56
+2021-05-26 11:47:16.997071: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536f173a700 of size 16777216 next 61
+2021-05-26 11:47:16.997081: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536f273a700 of size 4194304 next 84
+2021-05-26 11:47:16.997090: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536f2b3a700 of size 4194304 next 95
+2021-05-26 11:47:16.997099: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536f2f3a700 of size 4194304 next 101
+2021-05-26 11:47:16.997109: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536f333a700 of size 28549120 next 5
+2021-05-26 11:47:16.997118: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536f4e74700 of size 256 next 6
+2021-05-26 11:47:16.997127: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] Free  at 1536f4e74800 of size 158572544 next 107
+2021-05-26 11:47:16.997136: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536fe5ae800 of size 16777216 next 108
+2021-05-26 11:47:16.997146: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536ff5ae800 of size 4194304 next 113
+2021-05-26 11:47:16.997155: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536ff9ae800 of size 4194304 next 114
+2021-05-26 11:47:16.997164: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1536ffdae800 of size 4194304 next 111
+2021-05-26 11:47:16.997173: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537001ae800 of size 4194304 next 94
+2021-05-26 11:47:16.997183: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537005ae800 of size 4194304 next 126
+2021-05-26 11:47:16.997192: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537009ae800 of size 4194304 next 128
+2021-05-26 11:47:16.997201: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 153700dae800 of size 4194304 next 133
+2021-05-26 11:47:16.997210: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537011ae800 of size 4194304 next 123
+2021-05-26 11:47:16.997220: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537015ae800 of size 16777216 next 124
+2021-05-26 11:47:16.997229: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537025ae800 of size 4194304 next 129
+2021-05-26 11:47:16.997238: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537029ae800 of size 4194304 next 146
+2021-05-26 11:47:16.997247: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 153702dae800 of size 4194304 next 144
+2021-05-26 11:47:16.997256: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537031ae800 of size 4194304 next 147
+2021-05-26 11:47:16.997266: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537035ae800 of size 16777216 next 139
+2021-05-26 11:47:16.997275: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537045ae800 of size 16777216 next 140
+2021-05-26 11:47:16.997284: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537055ae800 of size 16777216 next 141
+2021-05-26 11:47:16.997293: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537065ae800 of size 4194304 next 132
+2021-05-26 11:47:16.997302: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537069ae800 of size 4194304 next 125
+2021-05-26 11:47:16.997316: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 153706dae800 of size 4194304 next 163
+2021-05-26 11:47:16.997326: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537071ae800 of size 4194304 next 155
+2021-05-26 11:47:16.997335: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537075ae800 of size 4194304 next 154
+2021-05-26 11:47:16.997344: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537079ae800 of size 16777216 next 148
+2021-05-26 11:47:16.997353: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] Free  at 1537089ae800 of size 20971520 next 173
+2021-05-26 11:47:16.997363: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 153709dae800 of size 4194304 next 180
+2021-05-26 11:47:16.997372: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15370a1ae800 of size 4194304 next 170
+2021-05-26 11:47:16.997381: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15370a5ae800 of size 16777216 next 171
+2021-05-26 11:47:16.997390: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] Free  at 15370b5ae800 of size 16777216 next 172
+2021-05-26 11:47:16.997399: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15370c5ae800 of size 4194304 next 164
+2021-05-26 11:47:16.997409: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15370c9ae800 of size 4194304 next 192
+2021-05-26 11:47:16.997418: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15370cdae800 of size 4194304 next 197
+2021-05-26 11:47:16.997427: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15370d1ae800 of size 4194304 next 186
+2021-05-26 11:47:16.997436: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15370d5ae800 of size 16777216 next 187
+2021-05-26 11:47:16.997446: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15370e5ae800 of size 25165824 next 207
+2021-05-26 11:47:16.997455: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15370fdae800 of size 4194304 next 212
+2021-05-26 11:47:16.997464: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537101ae800 of size 4194304 next 203
+2021-05-26 11:47:16.997473: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537105ae800 of size 16777216 next 204
+2021-05-26 11:47:16.997483: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537115ae800 of size 25165824 next 224
+2021-05-26 11:47:16.997492: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 153712dae800 of size 4194304 next 227
+2021-05-26 11:47:16.997501: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537131ae800 of size 4194304 next 219
+2021-05-26 11:47:16.997510: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537135ae800 of size 16777216 next 220
+2021-05-26 11:47:16.997520: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537145ae800 of size 4194304 next 215
+2021-05-26 11:47:16.997529: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537149ae800 of size 4194304 next 213
+2021-05-26 11:47:16.997538: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 153714dae800 of size 16777216 next 238
+2021-05-26 11:47:16.997547: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 153715dae800 of size 4194304 next 243
+2021-05-26 11:47:16.997556: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537161ae800 of size 4194304 next 235
+2021-05-26 11:47:16.997566: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537165ae800 of size 16777216 next 236
+2021-05-26 11:47:16.997575: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537175ae800 of size 4194304 next 221
+2021-05-26 11:47:16.997584: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537179ae800 of size 4194304 next 248
+2021-05-26 11:47:16.997593: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 153717dae800 of size 16777216 next 254
+2021-05-26 11:47:16.997607: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 153718dae800 of size 4194304 next 259
+2021-05-26 11:47:16.997617: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537191ae800 of size 4194304 next 251
+2021-05-26 11:47:16.997626: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537195ae800 of size 16777216 next 252
+2021-05-26 11:47:16.997635: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15371a5ae800 of size 4194304 next 245
+2021-05-26 11:47:16.997645: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15371a9ae800 of size 4194304 next 239
+2021-05-26 11:47:16.997654: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15371adae800 of size 16777216 next 269
+2021-05-26 11:47:16.997663: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15371bdae800 of size 4194304 next 275
+2021-05-26 11:47:16.997672: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15371c1ae800 of size 4194304 next 266
+2021-05-26 11:47:16.997682: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15371c5ae800 of size 16777216 next 267
+2021-05-26 11:47:16.997691: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15371d5ae800 of size 4194304 next 260
+2021-05-26 11:47:16.997700: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15371d9ae800 of size 4194304 next 268
+2021-05-26 11:47:16.997709: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15371ddae800 of size 16777216 next 271
+2021-05-26 11:47:16.997718: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15371edae800 of size 4194304 next 291
+2021-05-26 11:47:16.997728: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15371f1ae800 of size 4194304 next 283
+2021-05-26 11:47:16.997737: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15371f5ae800 of size 16777216 next 284
+2021-05-26 11:47:16.997746: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537205ae800 of size 4194304 next 202
+2021-05-26 11:47:16.997755: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537209ae800 of size 4194304 next 285
+2021-05-26 11:47:16.997765: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 153720dae800 of size 16777216 next 301
+2021-05-26 11:47:16.997774: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 153721dae800 of size 4194304 next 307
+2021-05-26 11:47:16.997783: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537221ae800 of size 4194304 next 298
+2021-05-26 11:47:16.997792: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537225ae800 of size 16777216 next 299
+2021-05-26 11:47:16.997801: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537235ae800 of size 4194304 next 278
+2021-05-26 11:47:16.997811: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537239ae800 of size 4194304 next 300
+2021-05-26 11:47:16.997820: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 153723dae800 of size 16777216 next 318
+2021-05-26 11:47:16.997829: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 153724dae800 of size 4194304 next 323
+2021-05-26 11:47:16.997838: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537251ae800 of size 4194304 next 315
+2021-05-26 11:47:16.997848: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537255ae800 of size 16777216 next 316
+2021-05-26 11:47:16.997857: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537265ae800 of size 4194304 next 309
+2021-05-26 11:47:16.997866: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537269ae800 of size 4194304 next 303
+2021-05-26 11:47:16.997875: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 153726dae800 of size 16777216 next 333
+2021-05-26 11:47:16.997885: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 153727dae800 of size 4194304 next 340
+2021-05-26 11:47:16.997898: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537281ae800 of size 4194304 next 330
+2021-05-26 11:47:16.997908: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537285ae800 of size 16777216 next 331
+2021-05-26 11:47:16.997917: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537295ae800 of size 4194304 next 336
+2021-05-26 11:47:16.997926: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537299ae800 of size 20971520 next 352
+2021-05-26 11:47:16.997936: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15372adae800 of size 4194304 next 357
+2021-05-26 11:47:16.997945: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15372b1ae800 of size 4194304 next 346
+2021-05-26 11:47:16.997954: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15372b5ae800 of size 16777216 next 347
+2021-05-26 11:47:16.997963: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15372c5ae800 of size 25165824 next 355
+2021-05-26 11:47:16.997976: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15372ddae800 of size 4194304 next 373
+2021-05-26 11:47:16.997985: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15372e1ae800 of size 4194304 next 363
+2021-05-26 11:47:16.997994: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15372e5ae800 of size 16777216 next 364
+2021-05-26 11:47:16.998004: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15372f5ae800 of size 4194304 next 365
+2021-05-26 11:47:16.998013: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15372f9ae800 of size 20971520 next 385
+2021-05-26 11:47:16.998022: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 153730dae800 of size 4194304 next 382
+2021-05-26 11:47:16.998032: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537311ae800 of size 4194304 next 378
+2021-05-26 11:47:16.998041: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537315ae800 of size 16777216 next 379
+2021-05-26 11:47:16.998050: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537325ae800 of size 4194304 next 356
+2021-05-26 11:47:16.998059: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537329ae800 of size 4194304 next 380
+2021-05-26 11:47:16.998069: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 153732dae800 of size 16777216 next 400
+2021-05-26 11:47:16.998078: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 153733dae800 of size 4194304 next 403
+2021-05-26 11:47:16.998087: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] Free  at 1537341ae800 of size 1235456 next 437
+2021-05-26 11:47:16.998097: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537342dc200 of size 617728 next 439
+2021-05-26 11:47:16.998106: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] Free  at 153734372f00 of size 2341120 next 394
+2021-05-26 11:47:16.998115: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537345ae800 of size 16777216 next 395
+2021-05-26 11:47:16.998124: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537355ae800 of size 4194304 next 372
+2021-05-26 11:47:16.998134: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537359ae800 of size 4194304 next 134
+2021-05-26 11:47:16.998143: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 153735dae800 of size 4194304 next 428
+2021-05-26 11:47:16.998152: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] Free  at 1537361ae800 of size 6291456 next 76
+2021-05-26 11:47:16.998162: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537367ae800 of size 2097152 next 415
+2021-05-26 11:47:16.998171: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537369ae800 of size 4194304 next 46
+2021-05-26 11:47:16.998180: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 153736dae800 of size 4194304 next 47
+2021-05-26 11:47:16.998189: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537371ae800 of size 4194304 next 410
+2021-05-26 11:47:16.998204: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537375ae800 of size 16777216 next 411
+2021-05-26 11:47:16.998214: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537385ae800 of size 4194304 next 421
+2021-05-26 11:47:16.998223: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537389ae800 of size 4194304 next 188
+2021-05-26 11:47:16.998232: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 153738dae800 of size 4194304 next 182
+2021-05-26 11:47:16.998242: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537391ae800 of size 4194304 next 407
+2021-05-26 11:47:16.998251: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537395ae800 of size 16777216 next 115
+2021-05-26 11:47:16.998260: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15373a5ae800 of size 16777216 next 138
+2021-05-26 11:47:16.998269: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15373b5ae800 of size 16777216 next 424
+2021-05-26 11:47:16.998279: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15373c5ae800 of size 16777216 next 12
+2021-05-26 11:47:16.998288: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15373d5ae800 of size 16777216 next 366
+2021-05-26 11:47:16.998297: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] Free  at 15373e5ae800 of size 166150144 next 404
+2021-05-26 11:47:16.998307: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 153748422800 of size 125018112 next 42
+2021-05-26 11:47:16.998316: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15374fb5c800 of size 632553472 next 425
+2021-05-26 11:47:16.998325: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15377569c800 of size 632553472 next 13
+2021-05-26 11:47:16.998335: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 15379b1dc800 of size 632553472 next 432
+2021-05-26 11:47:16.998344: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] Free  at 1537c0d1c800 of size 632553472 next 441
+2021-05-26 11:47:16.998353: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 1537e685c800 of size 632553472 next 429
+2021-05-26 11:47:16.998363: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] Free  at 15380c39c800 of size 26631983616 next 18446744073709551615
+2021-05-26 11:47:16.998372: I tensorflow/core/common_runtime/bfc_allocator.cc:1033]      Summary of in-use Chunks by size: 
+2021-05-26 11:47:16.998383: I tensorflow/core/common_runtime/bfc_allocator.cc:1036] 28 Chunks of size 256 totalling 7.0KiB
+2021-05-26 11:47:16.998393: I tensorflow/core/common_runtime/bfc_allocator.cc:1036] 1 Chunks of size 1280 totalling 1.2KiB
+2021-05-26 11:47:16.998403: I tensorflow/core/common_runtime/bfc_allocator.cc:1036] 216 Chunks of size 4096 totalling 864.0KiB
+2021-05-26 11:47:16.998412: I tensorflow/core/common_runtime/bfc_allocator.cc:1036] 1 Chunks of size 4352 totalling 4.2KiB
+2021-05-26 11:47:16.998422: I tensorflow/core/common_runtime/bfc_allocator.cc:1036] 1 Chunks of size 5632 totalling 5.5KiB
+2021-05-26 11:47:16.998432: I tensorflow/core/common_runtime/bfc_allocator.cc:1036] 1 Chunks of size 7936 totalling 7.8KiB
+2021-05-26 11:47:16.998441: I tensorflow/core/common_runtime/bfc_allocator.cc:1036] 1 Chunks of size 12288 totalling 12.0KiB
+2021-05-26 11:47:16.998451: I tensorflow/core/common_runtime/bfc_allocator.cc:1036] 14 Chunks of size 16384 totalling 224.0KiB
+2021-05-26 11:47:16.998461: I tensorflow/core/common_runtime/bfc_allocator.cc:1036] 6 Chunks of size 20480 totalling 120.0KiB
+2021-05-26 11:47:16.998471: I tensorflow/core/common_runtime/bfc_allocator.cc:1036] 5 Chunks of size 24576 totalling 120.0KiB
+2021-05-26 11:47:16.998481: I tensorflow/core/common_runtime/bfc_allocator.cc:1036] 1 Chunks of size 617728 totalling 603.2KiB
+2021-05-26 11:47:16.998490: I tensorflow/core/common_runtime/bfc_allocator.cc:1036] 1 Chunks of size 2097152 totalling 2.00MiB
+2021-05-26 11:47:16.998506: I tensorflow/core/common_runtime/bfc_allocator.cc:1036] 94 Chunks of size 4194304 totalling 376.00MiB
+2021-05-26 11:47:16.998516: I tensorflow/core/common_runtime/bfc_allocator.cc:1036] 1 Chunks of size 5431296 totalling 5.18MiB
+2021-05-26 11:47:16.998526: I tensorflow/core/common_runtime/bfc_allocator.cc:1036] 1 Chunks of size 6291456 totalling 6.00MiB
+2021-05-26 11:47:16.998536: I tensorflow/core/common_runtime/bfc_allocator.cc:1036] 1 Chunks of size 6692864 totalling 6.38MiB
+2021-05-26 11:47:16.998545: I tensorflow/core/common_runtime/bfc_allocator.cc:1036] 41 Chunks of size 16777216 totalling 656.00MiB
+2021-05-26 11:47:16.998555: I tensorflow/core/common_runtime/bfc_allocator.cc:1036] 2 Chunks of size 20971520 totalling 40.00MiB
+2021-05-26 11:47:16.998565: I tensorflow/core/common_runtime/bfc_allocator.cc:1036] 4 Chunks of size 25165824 totalling 96.00MiB
+2021-05-26 11:47:16.998575: I tensorflow/core/common_runtime/bfc_allocator.cc:1036] 1 Chunks of size 28549120 totalling 27.23MiB
+2021-05-26 11:47:16.998585: I tensorflow/core/common_runtime/bfc_allocator.cc:1036] 1 Chunks of size 125018112 totalling 119.23MiB
+2021-05-26 11:47:16.998594: I tensorflow/core/common_runtime/bfc_allocator.cc:1036] 4 Chunks of size 632553472 totalling 2.36GiB
+2021-05-26 11:47:16.998604: I tensorflow/core/common_runtime/bfc_allocator.cc:1040] Sum Total of in-use chunks: 3.66GiB
+2021-05-26 11:47:16.998614: I tensorflow/core/common_runtime/bfc_allocator.cc:1042] total_region_allocated_bytes_: 31568271872 memory_limit_: 31568271872 available bytes: 0 curr_region_allocation_bytes_: 63136543744
+2021-05-26 11:47:16.998626: I tensorflow/core/common_runtime/bfc_allocator.cc:1048] Stats: 
+Limit:                     31568271872
+InUse:                      3931046912
+MaxInUse:                   4563600384
+NumAllocs:                      511296
+MaxAllocSize:                632553472
+Reserved:                            0
+PeakReserved:                        0
+LargestFreeBlock:                    0
+
+2021-05-26 11:47:16.998648: W tensorflow/core/common_runtime/bfc_allocator.cc:441] ************_***____________________________________________________________________________________
+2021-05-26 11:47:16.998684: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at batch_matmul_op_impl.h:685 : Resource exhausted: OOM when allocating tensor with shape[32,16,4826,4826] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+Traceback (most recent call last):
+  File "model_training/Ensemble/reddit_data_ernieL.py", line 380, in <module>
+    main(args)
+  File "model_training/Ensemble/reddit_data_ernieL.py", line 269, in main
+    ernie_test_predictions = predict_transformers(model=ernie_trained_model, test_data=test_encodings_ernie)
+  File "model_training/Ensemble/reddit_data_ernieL.py", line 102, in predict_transformers
+    logits = model.predict(test_data[0])["logits"]
+  File "/cluster/home/eirida/masteroppgave/Masteroppgave/venv/lib64/python3.6/site-packages/tensorflow/python/keras/engine/training.py", line 1629, in predict
+    tmp_batch_outputs = self.predict_function(iterator)
+  File "/cluster/home/eirida/masteroppgave/Masteroppgave/venv/lib64/python3.6/site-packages/tensorflow/python/eager/def_function.py", line 828, in __call__
+    result = self._call(*args, **kwds)
+  File "/cluster/home/eirida/masteroppgave/Masteroppgave/venv/lib64/python3.6/site-packages/tensorflow/python/eager/def_function.py", line 862, in _call
+    results = self._stateful_fn(*args, **kwds)
+  File "/cluster/home/eirida/masteroppgave/Masteroppgave/venv/lib64/python3.6/site-packages/tensorflow/python/eager/function.py", line 2943, in __call__
+    filtered_flat_args, captured_inputs=graph_function.captured_inputs)  # pylint: disable=protected-access
+  File "/cluster/home/eirida/masteroppgave/Masteroppgave/venv/lib64/python3.6/site-packages/tensorflow/python/eager/function.py", line 1919, in _call_flat
+    ctx, args, cancellation_manager=cancellation_manager))
+  File "/cluster/home/eirida/masteroppgave/Masteroppgave/venv/lib64/python3.6/site-packages/tensorflow/python/eager/function.py", line 560, in call
+    ctx=ctx)
+  File "/cluster/home/eirida/masteroppgave/Masteroppgave/venv/lib64/python3.6/site-packages/tensorflow/python/eager/execute.py", line 60, in quick_execute
+    inputs, attrs, num_outputs)
+tensorflow.python.framework.errors_impl.ResourceExhaustedError:  OOM when allocating tensor with shape[32,16,4826,4826] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+	 [[node tf_bert_for_sequence_classification/bert/encoder/layer_._0/attention/self/MatMul (defined at /cluster/home/eirida/masteroppgave/Masteroppgave/venv/lib64/python3.6/site-packages/transformers/models/bert/modeling_tf_bert.py:259) ]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info.
+ [Op:__inference_predict_function_21724]
+
+Errors may have originated from an input operation.
+Input Source operations connected to node tf_bert_for_sequence_classification/bert/encoder/layer_._0/attention/self/MatMul:
+ tf_bert_for_sequence_classification/bert/encoder/layer_._0/attention/self/transpose (defined at /cluster/home/eirida/masteroppgave/Masteroppgave/venv/lib64/python3.6/site-packages/transformers/models/bert/modeling_tf_bert.py:239)
+
+Function call stack:
+predict_function
+
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.iter
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.decay
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.learning_rate
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).classifier.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).classifier.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.embeddings.weight
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.embeddings.embeddings
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.embeddings.token_type_embeddings
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.embeddings.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.embeddings.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.pooler.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.pooler.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.0.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.0.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.0.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.0.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.0.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.0.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.1.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.1.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.1.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.1.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.1.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.1.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.2.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.2.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.2.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.2.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.2.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.2.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.3.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.3.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.3.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.3.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.3.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.3.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.4.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.4.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.4.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.4.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.4.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.4.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.5.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.5.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.5.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.5.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.5.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.5.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.6.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.6.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.6.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.6.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.6.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.6.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.7.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.7.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.7.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.7.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.7.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.7.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.8.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.8.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.8.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.8.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.8.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.8.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.9.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.9.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.9.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.9.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.9.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.9.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.10.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.10.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.10.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.10.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.10.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.10.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.11.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.11.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.11.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.11.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.11.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.11.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.12.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.12.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.12.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.12.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.12.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.12.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.13.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.13.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.13.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.13.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.13.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.13.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.14.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.14.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.14.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.14.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.14.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.14.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.15.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.15.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.15.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.15.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.15.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.15.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.16.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.16.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.16.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.16.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.16.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.16.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.17.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.17.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.17.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.17.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.17.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.17.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.18.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.18.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.18.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.18.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.18.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.18.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.19.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.19.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.19.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.19.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.19.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.19.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.20.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.20.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.20.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.20.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.20.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.20.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.21.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.21.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.21.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.21.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.21.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.21.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.22.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.22.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.22.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.22.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.22.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.22.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.23.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.23.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.23.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.23.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.23.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.23.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.0.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.0.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.0.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.0.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.0.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.0.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.0.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.0.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.0.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.0.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.1.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.1.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.1.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.1.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.1.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.1.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.1.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.1.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.1.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.1.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.2.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.2.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.2.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.2.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.2.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.2.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.2.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.2.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.2.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.2.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.3.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.3.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.3.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.3.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.3.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.3.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.3.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.3.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.3.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.3.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.4.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.4.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.4.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.4.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.4.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.4.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.4.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.4.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.4.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.4.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.5.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.5.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.5.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.5.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.5.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.5.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.5.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.5.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.5.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.5.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.6.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.6.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.6.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.6.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.6.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.6.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.6.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.6.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.6.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.6.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.7.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.7.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.7.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.7.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.7.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.7.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.7.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.7.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.7.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.7.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.8.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.8.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.8.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.8.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.8.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.8.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.8.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.8.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.8.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.8.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.9.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.9.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.9.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.9.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.9.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.9.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.9.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.9.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.9.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.9.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.10.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.10.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.10.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.10.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.10.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.10.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.10.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.10.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.10.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.10.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.11.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.11.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.11.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.11.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.11.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.11.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.11.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.11.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.11.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.11.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.12.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.12.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.12.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.12.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.12.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.12.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.12.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.12.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.12.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.12.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.13.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.13.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.13.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.13.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.13.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.13.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.13.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.13.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.13.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.13.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.14.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.14.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.14.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.14.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.14.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.14.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.14.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.14.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.14.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.14.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.15.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.15.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.15.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.15.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.15.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.15.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.15.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.15.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.15.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.15.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.16.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.16.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.16.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.16.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.16.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.16.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.16.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.16.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.16.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.16.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.17.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.17.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.17.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.17.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.17.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.17.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.17.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.17.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.17.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.17.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.18.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.18.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.18.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.18.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.18.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.18.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.18.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.18.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.18.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.18.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.19.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.19.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.19.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.19.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.19.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.19.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.19.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.19.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.19.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.19.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.20.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.20.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.20.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.20.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.20.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.20.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.20.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.20.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.20.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.20.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.21.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.21.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.21.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.21.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.21.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.21.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.21.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.21.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.21.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.21.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.22.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.22.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.22.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.22.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.22.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.22.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.22.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.22.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.22.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.22.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.23.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.23.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.23.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.23.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.23.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.23.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.23.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.23.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.23.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).bert.encoder.layer.23.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).classifier.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).classifier.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.embeddings.weight
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.embeddings.embeddings
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.embeddings.token_type_embeddings
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.embeddings.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.embeddings.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.pooler.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.pooler.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.0.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.0.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.0.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.0.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.0.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.0.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.1.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.1.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.1.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.1.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.1.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.1.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.2.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.2.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.2.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.2.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.2.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.2.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.3.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.3.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.3.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.3.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.3.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.3.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.4.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.4.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.4.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.4.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.4.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.4.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.5.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.5.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.5.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.5.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.5.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.5.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.6.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.6.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.6.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.6.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.6.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.6.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.7.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.7.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.7.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.7.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.7.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.7.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.8.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.8.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.8.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.8.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.8.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.8.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.9.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.9.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.9.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.9.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.9.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.9.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.10.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.10.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.10.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.10.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.10.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.10.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.11.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.11.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.11.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.11.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.11.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.11.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.12.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.12.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.12.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.12.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.12.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.12.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.13.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.13.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.13.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.13.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.13.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.13.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.14.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.14.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.14.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.14.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.14.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.14.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.15.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.15.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.15.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.15.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.15.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.15.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.16.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.16.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.16.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.16.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.16.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.16.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.17.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.17.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.17.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.17.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.17.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.17.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.18.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.18.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.18.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.18.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.18.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.18.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.19.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.19.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.19.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.19.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.19.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.19.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.20.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.20.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.20.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.20.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.20.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.20.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.21.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.21.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.21.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.21.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.21.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.21.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.22.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.22.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.22.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.22.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.22.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.22.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.23.intermediate.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.23.intermediate.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.23.bert_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.23.bert_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.23.bert_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.23.bert_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.0.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.0.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.0.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.0.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.0.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.0.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.0.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.0.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.0.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.0.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.1.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.1.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.1.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.1.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.1.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.1.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.1.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.1.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.1.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.1.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.2.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.2.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.2.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.2.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.2.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.2.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.2.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.2.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.2.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.2.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.3.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.3.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.3.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.3.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.3.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.3.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.3.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.3.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.3.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.3.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.4.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.4.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.4.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.4.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.4.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.4.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.4.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.4.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.4.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.4.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.5.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.5.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.5.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.5.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.5.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.5.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.5.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.5.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.5.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.5.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.6.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.6.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.6.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.6.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.6.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.6.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.6.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.6.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.6.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.6.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.7.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.7.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.7.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.7.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.7.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.7.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.7.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.7.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.7.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.7.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.8.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.8.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.8.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.8.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.8.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.8.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.8.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.8.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.8.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.8.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.9.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.9.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.9.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.9.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.9.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.9.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.9.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.9.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.9.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.9.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.10.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.10.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.10.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.10.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.10.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.10.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.10.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.10.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.10.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.10.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.11.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.11.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.11.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.11.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.11.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.11.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.11.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.11.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.11.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.11.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.12.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.12.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.12.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.12.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.12.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.12.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.12.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.12.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.12.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.12.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.13.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.13.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.13.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.13.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.13.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.13.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.13.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.13.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.13.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.13.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.14.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.14.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.14.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.14.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.14.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.14.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.14.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.14.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.14.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.14.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.15.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.15.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.15.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.15.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.15.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.15.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.15.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.15.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.15.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.15.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.16.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.16.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.16.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.16.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.16.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.16.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.16.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.16.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.16.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.16.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.17.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.17.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.17.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.17.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.17.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.17.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.17.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.17.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.17.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.17.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.18.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.18.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.18.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.18.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.18.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.18.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.18.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.18.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.18.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.18.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.19.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.19.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.19.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.19.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.19.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.19.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.19.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.19.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.19.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.19.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.20.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.20.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.20.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.20.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.20.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.20.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.20.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.20.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.20.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.20.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.21.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.21.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.21.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.21.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.21.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.21.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.21.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.21.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.21.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.21.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.22.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.22.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.22.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.22.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.22.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.22.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.22.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.22.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.22.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.22.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.23.attention.self_attention.query.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.23.attention.self_attention.query.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.23.attention.self_attention.key.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.23.attention.self_attention.key.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.23.attention.self_attention.value.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.23.attention.self_attention.value.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.23.attention.dense_output.dense.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.23.attention.dense_output.dense.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.23.attention.dense_output.LayerNorm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).bert.encoder.layer.23.attention.dense_output.LayerNorm.beta
+WARNING:tensorflow:A checkpoint was restored (e.g. tf.train.Checkpoint.restore or tf.keras.Model.load_weights) but not all checkpointed values were used. See above for specific issues. Use expect_partial() on the load status object, e.g. tf.train.Checkpoint.restore(...).expect_partial(), to silence these warnings, or use assert_consumed() to make the check explicit. See https://www.tensorflow.org/guide/checkpoint#loading_mechanics for details.
+Linux idun-06-03 4.18.0-193.el8.x86_64 #1 SMP Fri May 8 10:59:10 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux

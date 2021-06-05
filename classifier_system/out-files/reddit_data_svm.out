@@ -1,0 +1,64 @@
+We are running from this directory: /cluster/home/eirida/masteroppgave/Masteroppgave
+The name of the job is: reddit_data_svm
+Th job ID is 249285
+The job was run on these nodes: idun-04-01
+Number of nodes: 1
+We are using 8 cores
+We are using 8 cores per node
+Total of 8 cores
+2021-05-23 13:24:23.745001: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+Starting run...
+2021-05-23 13:24:28.074073: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcuda.so.1
+2021-05-23 13:24:28.093192: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:03:00.0 name: Tesla P100-PCIE-16GB computeCapability: 6.0
+coreClock: 1.3285GHz coreCount: 56 deviceMemorySize: 15.90GiB deviceMemoryBandwidth: 681.88GiB/s
+2021-05-23 13:24:28.093241: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-05-23 13:24:28.098148: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-05-23 13:24:28.098225: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-05-23 13:24:28.101425: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-05-23 13:24:28.102786: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-05-23 13:24:28.106259: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-05-23 13:24:28.107509: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2021-05-23 13:24:28.107817: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2021-05-23 13:24:28.108615: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+Number of GPUs Avail: 1
+2021-05-23 13:24:28.108912: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2021-05-23 13:24:28.120461: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 2200015000 Hz
+2021-05-23 13:24:28.120969: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55f25bd84480 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2021-05-23 13:24:28.121010: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2021-05-23 13:24:28.310346: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55f25c0b4340 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2021-05-23 13:24:28.310441: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla P100-PCIE-16GB, Compute Capability 6.0
+2021-05-23 13:24:28.310964: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:03:00.0 name: Tesla P100-PCIE-16GB computeCapability: 6.0
+coreClock: 1.3285GHz coreCount: 56 deviceMemorySize: 15.90GiB deviceMemoryBandwidth: 681.88GiB/s
+2021-05-23 13:24:28.311016: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-05-23 13:24:28.311064: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-05-23 13:24:28.311095: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-05-23 13:24:28.311124: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-05-23 13:24:28.311179: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-05-23 13:24:28.311211: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-05-23 13:24:28.311240: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2021-05-23 13:24:28.311271: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2021-05-23 13:24:28.311954: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2021-05-23 13:24:28.312008: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-05-23 13:24:28.836486: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-05-23 13:24:28.836590: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2021-05-23 13:24:28.836612: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2021-05-23 13:24:28.837526: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/device:GPU:0 with 123 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:03:00.0, compute capability: 6.0)
+GPU Name: /device:GPU:0
+Cuda: True
+14750 14750 14750
+376 376 376
+Score from SVM:
+              precision    recall  f1-score   support
+
+           0      0.917     0.820     0.866       189
+           1      0.516     0.818     0.633        99
+           2      0.700     0.398     0.507        88
+
+    accuracy                          0.721       376
+   macro avg      0.711     0.679     0.669       376
+weighted avg      0.761     0.721     0.721       376
+
+Linux idun-04-01 4.18.0-193.el8.x86_64 #1 SMP Fri May 8 10:59:10 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux

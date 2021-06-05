@@ -1,0 +1,25 @@
+We are running from this directory: /cluster/home/eirida/masteroppgave/Masteroppgave
+The name of the job is: svm_semi
+Th job ID is 219971
+The job was run on these nodes: idun-04-15
+Number of nodes: 1
+We are using 8 cores
+We are using 8 cores per node
+Total of 8 cores
+[nltk_data] Downloading package vader_lexicon to
+[nltk_data]     /cluster/home/eirida/nltk_data...
+[nltk_data]   Package vader_lexicon is already up-to-date!
+Fit transform
+Transform
+Training...
+              precision    recall  f1-score   support
+
+           0      0.914     0.930     0.922      1282
+           1      0.679     0.687     0.683       249
+           2      0.711     0.546     0.618       108
+
+    accuracy                          0.868      1639
+   macro avg      0.768     0.721     0.741      1639
+weighted avg      0.865     0.868     0.866      1639
+
+Linux idun-04-15 4.18.0-193.el8.x86_64 #1 SMP Fri May 8 10:59:10 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
